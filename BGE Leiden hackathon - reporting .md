@@ -1,9 +1,12 @@
 ---
 title: 'Enhancing Digital Infrastructures and Data Handling Practices for Single Specimen Barcoding \- the 2024 BGE Barcoding Hackathon'
 tags:
-  - Barcoding
-  - ANOther
-  - ANOther
+  - DNA barcoding
+  - Bioinformatics workflows
+  - FAIR data publishing
+  - Data integration
+  - Data curation
+  - Biodiversity Genomics Europe (BGE)
 authors:
   - name: Rutger Vos (RAV)
     orcid: 0000
@@ -104,10 +107,6 @@ event:
 ## Abstract
 
 The 2024 BGE Barcoding Hackathon, hosted by the Biodiversity Genomics Europe (BGE) project in Leiden, Netherlands, focused on advancing digital infrastructures and data handling practices for single specimen barcoding. This event brought together 24 participants from various consortium member institutes to enhance workflows in DNA barcoding, which complements genome sequencing efforts within BGE. The hackathon was structured around four thematic pillars: Data Generation and Processing, BOLD Release Candidate, Wider Data Integration, and Reference Data Curation. Participants worked on optimizing barcode generation pipelines, developing a new version of the Barcode of Life Data Systems (BOLD) data publishing platform, harmonizing data standards for better integration with databases like ENA and UNITE, and automating curation processes for DNA barcoding records. The outcomes include improved workflows, enhanced data interoperability, and refined curation standards, which collectively support BGE's goals of achieving a step change in molecular biodiversity monitoring and research.
-
-## Keywords
-
-DNA barcoding; Bioinformatics workflows; FAIR data publishing; Data integration; Data curation; Biodiversity Genomics Europe (BGE)
 
 ## Background
 
