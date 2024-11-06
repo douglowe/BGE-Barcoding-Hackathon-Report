@@ -90,7 +90,7 @@ affiliations:
   - name: Università degli Studi di Firenze, Florence, Italy
     index: 12
 date: 2024
-bibliography: references.bib
+bibliography: paper.bib
 authors_short: Rutger et al. (2021) BGE Barcoding 
 group: BGE
 event: BGE Barcoding Hackathon
