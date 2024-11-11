@@ -30,6 +30,7 @@ authors:
       - 6
       - 7
   - name: Eli Chadwick (EC)
+    orcid: 0000-0002-0035-6475
     affiliation: 8
   - name: Pierre-Etienne Cholley (PEC)
     affiliation: 1
@@ -40,6 +41,7 @@ authors:
   - name: Sharif Islam (SI)
     affiliation: 1
   - name: Nick Juty (NJ)
+    orcid: 0000-0002-2036-8350
     affiliation: 8
   - name: Vishnukumar Balavenkataraman Kadhirvelu (VBK)
     orcid: 0000-0001-9845-2547
@@ -60,6 +62,7 @@ authors:
   - name: Sujeevan Ratnasingham (SR)
     affiliation: 4
   - name: Stian Soiland-Reyes (SSR)
+    orcid: 0000-0001-9842-9718
     affiliation: 8
   - name: Giorgia Staffoni (GS)
     affiliation: 12
