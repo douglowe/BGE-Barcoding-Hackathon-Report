@@ -14,8 +14,10 @@ authors:
       - 1
       - 2
   - name: Kessy Abarenkov (KA)
+    orcid: 0000-0001-5526-4845
     affiliation: 3
   - name: Jireh Agda (JIA)
+    orcid: 0009-0004-5235-9610
     affiliation: 4
   - name: Josh Agda (JOA)
     affiliation: 4
@@ -35,11 +37,12 @@ authors:
   - name: Pierre-Etienne Cholley (PEC)
     affiliation: 1
   - name: Fabian Deister (FD)
+    orcid: 0000-0002-3172-3223
     affiliation: 9
   - name: Dick Groenenberg (DG)
     affiliation: 1
   - name: Sharif Islam (SI)
-  - orcid: 0000-0001-8050-0299
+    orcid: 0000-0001-8050-0299
     affiliation: 1
   - name: Nick Juty (NJ)
     orcid: 0000-0002-2036-8350
@@ -54,18 +57,22 @@ authors:
     orcid: 0000-0002-1248-3594
     affiliation: 8
   - name: Hana Merchant (HM)
+    orcid: 0000-0003-1373-8808
     affiliation: 11
   - name: Joana Pauperio (JP)
+    orcid: 0000-0003-2569-0768
     affiliation: 10
   - name: Ben Price (BP)
     orcid: 0000-0001-5497-4087
     affiliation: 11
   - name: Sujeevan Ratnasingham (SR)
+    orcid: 0000-0002-3694-0171
     affiliation: 4
   - name: Stian Soiland-Reyes (SSR)
     orcid: 0000-0001-9842-9718
     affiliation: 8
   - name: Giorgia Staffoni (GS)
+    orcid: 0009-0003-5916-1757
     affiliation: 12
   - name: Catherine Wei (CW)
     affiliation: 4
@@ -73,6 +80,7 @@ authors:
     orcid: 0000-0001-6444-0310
     affiliation: 11
   - name: Dimitris Koureas (DK)
+    orcid: 0000-0002-4842-6487
     affiliation: 1
 
 affiliations:
