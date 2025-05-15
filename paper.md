@@ -86,33 +86,37 @@ authors:
 affiliations:
   - name: Naturalis Biodiversity Center, Leiden, The Netherlands
     index: 1
-  - name: Institute of Biology Leiden, Leiden University, Leiden, The Netherlands 
-    index: 2 
+  - name: Institute of Biology Leiden, Leiden University, Leiden, The Netherlands
+    index: 2
   - name: Natural History Museum, University of Tartu, Tartu, Estonia
-    index: 3 
+    index: 3
   - name: Centre for Biodiversity Genomics, Guelph, Canada
-    index: 4 
+    index: 4
   - name: Leibniz Institute for the Analysis of Biodiversity Change, Museum Koenig, Bonn, Germany
-    index: 5 
-  - name: Leibniz Institute for Zoo and Wildlife Research, Berlin, Germany 
-    index: 6 
+    index: 5
+  - name: Leibniz Institute for Zoo and Wildlife Research, Berlin, Germany
+    index: 6
   - name: Berlin Center for Genomics in Biodiversity Research, Berlin, Germany
-    index: 7 
-  - name: The University of Manchester, Manchester, UK 
-    index: 8 
+    index: 7
+  - name: The University of Manchester, Manchester, UK
+    index: 8
   - name: Zoologische Staatssammlung München, Munich, Germany
-    index: 9 
+    index: 9
   - name: European Molecular Biology Laboratory, European Bioinformatics Institute, Wellcome Genome Campus, Hinxton, UK
-    index: 10 
+    index: 10
   - name: Natural History Museum, London, UK
     index: 11
   - name: Università degli Studi di Firenze, Florence, Italy
     index: 12
 date: 2024
 bibliography: paper.bib
-authors_short: Vos et al. (2024) BGE Barcoding Hackathon 
+authors_short: Vos et al. (2024) BGE Barcoding Hackathon
 group: BGE
 event: BGE Barcoding Hackathon
+biohackathon_name: BGE Barcoding Hackathon
+biohackathon_url: "https://biodiversitygenomics.eu/2024/06/06/sampling_biodiversity_hotspots_sweden-2/"
+biohackathon_location: "Leiden, the Netherlands"
+git_url: "https://github.com/douglowe/BGE-Barcoding-Hackathon-Report"
 ---
 
 ## Abstract
@@ -139,7 +143,7 @@ This hackathon was structured around four thematic pillars: Data Generation and 
 
 This theme within the hackathon addressed bioinformatics aspects of barcode generation and the processing of genomic data. The primary focus was on the generation of fresh barcodes at UNIFI and on refining the genome skimming processes at NHM and Naturalis. This theme is integral to BGE's Work Package 6 (WP6), which encompasses the technical and procedural frameworks for DNA barcode generation.
 
-A central component of this theme’s activities was the genome skimming pipeline developed at NHM. This pipeline, which is hosted publicly on GitHub[^1], is implemented using Snakemake—a workflow management system that enables reproducible and scalable genomic analyses. The pipeline incorporates Python programming and various dependencies that are managed through Conda, providing a reproducible and portable environment for data processing. The hackathon resulted in several improvements to the pipeline, including the streamlining of input requirements, the identification and removal of minor issues, simplification of the pipeline deployment through the removal of singularity dependencies, improved readability of code using Snakemake checkpoints, and improvement of the output summary with MultiQC[^2]. 
+A central component of this theme’s activities was the genome skimming pipeline developed at NHM. This pipeline, which is hosted publicly on GitHub[^1], is implemented using Snakemake—a workflow management system that enables reproducible and scalable genomic analyses. The pipeline incorporates Python programming and various dependencies that are managed through Conda, providing a reproducible and portable environment for data processing. The hackathon resulted in several improvements to the pipeline, including the streamlining of input requirements, the identification and removal of minor issues, simplification of the pipeline deployment through the removal of singularity dependencies, improved readability of code using Snakemake checkpoints, and improvement of the output summary with MultiQC[^2].
 
 Efforts were also made to enhance the provenance tracking capabilities of the Snakemake workflows. The team worked on integrating reporting facilities that could output Research Object Crate (RO-Crate [@Soiland-Reyes2022-7]) run profiles, facilitating better documentation and reproducibility of genomic workflows. This development is also available on GitHub[^3]. Lastly, the hackathon resulted in the pipeline's submission to WorkflowHub[^4] [@Silva2020-8], where an RO-Crate detailing the pipeline's configuration and usage is generated.
 
@@ -161,7 +165,7 @@ Collaboration was a central feature of the hackathon, with participants from the
 
 ## Wider Data Integration
 
-This theme of the hackathon focused on enhancing the interoperability and connectivity between BOLD, DwC, MIxS, ENA, and UNITE. A central element in this effort was the application of the BCDM to enable harmonizing data formats and metadata standards within BGE. In particular, these terms and data formats are crucial for sample data submission to BOLD and ENA. 
+This theme of the hackathon focused on enhancing the interoperability and connectivity between BOLD, DwC, MIxS, ENA, and UNITE. A central element in this effort was the application of the BCDM to enable harmonizing data formats and metadata standards within BGE. In particular, these terms and data formats are crucial for sample data submission to BOLD and ENA.
 
 We dealt with a variety of terms across different data models, such as processid, museumid, sampleid (BCDM), materialSampleID (DwC), samp\_name, source\_mat\_id (MIxS). All of these terms are related but also have specific context and semantics attached to them, coming from their respective source domains. A structured mapping approach allows not only the conversion and integration of data but also ensures that information can be accurately and efficiently shared between platforms \- with as much machine readability as possible. This way, each domain/source can maintain their terms but still take advantage of data linking and sharing.
 
@@ -173,15 +177,15 @@ A significant portion of the hackathon efforts was devoted to developing mapping
 
 During the hackathon, we utilized the Simple Standard for Sharing Ontological Mappings (SSSOM) to create the mappings between different data models. For instance, starting with a manually curated TSV file containing two columns of terms from BCDM and UNITE, we enhanced this file by incorporating essential SSSOM elements to standardize and clarify the mappings. We followed a similar process for the other mapping exercises.
 
-In the updated file, subject\_id represents BCDM terms and object\_id refers to the corresponding UNITE terms, demonstrating the directional mapping from BCDM to UNITE. For example, bcdm:processid maps to unite:source\_url with skos:closeMatch as a predicate\_id. Thus, the mapping context becomes (using the subject-predicate-object triple framework): bcdm:processid maps to unite:source\_url, and we consider this a close match rather than an exact match, based on the Simple Knowledge Organization System (SKOS[^11]) vocabulary. 
+In the updated file, subject\_id represents BCDM terms and object\_id refers to the corresponding UNITE terms, demonstrating the directional mapping from BCDM to UNITE. For example, bcdm:processid maps to unite:source\_url with skos:closeMatch as a predicate\_id. Thus, the mapping context becomes (using the subject-predicate-object triple framework): bcdm:processid maps to unite:source\_url, and we consider this a close match rather than an exact match, based on the Simple Knowledge Organization System (SKOS[^11]) vocabulary.
 
 Key SSSOM elements such as predicate\_id, mapping\_justification, mapping\_date, and author\_id were added to provide comprehensive metadata for each mapping. In another mapping, bcdm:processid maps to [dwc:materialSampleID](https://dwc.tdwg.org/terms/#dwc:materialSampleID) with skos:exactMatch as the predicate\_id. This indicates a direct equivalence between the terms. This structured approach ensures that each mapping is clear, justified, tracked and maintainable. This approach also allows the mapping file to be machine readable and aligns with the suggestions coming out from different European FAIR mapping initiatives (Metadata and Schema Crosswalk Registry from FAIRCORE4EOSC [@Sanden2024-13].
 
 It is important to note that not all namespace prefixes resolve to a resource that provides further machine-readable metadata or explicitly enumerates the terms from the namespace. For instance, DwC provides IRIs for each term and RDF and XML serializations. Each ENA checklist has a browsable list (example: [ERC000013](https://www.ebi.ac.uk/ena/browser/view/ERC000013)) and an XML download option (example: [ERC000013 XML](https://www.ebi.ac.uk/ena/browser/api/xml/ERC000013)). However, the approach to maintaining terms and vocabularies is not consistent across all data formats and repositories.
 
-In addition to this semantic mapping work, the data integration theme extended to the structural organization of BGE’s genome skimming data submissions. ENA and the genome skimming data uploaders, NHM and Naturalis, agreed upon a multi-level project structure for data submission. This structure assigns different specimen providers their own subproject under which the barcoding data for each specimen is linked with the specific BioSample [@Courtot2022-14] entry assigned to it. 
+In addition to this semantic mapping work, the data integration theme extended to the structural organization of BGE’s genome skimming data submissions. ENA and the genome skimming data uploaders, NHM and Naturalis, agreed upon a multi-level project structure for data submission. This structure assigns different specimen providers their own subproject under which the barcoding data for each specimen is linked with the specific BioSample [@Courtot2022-14] entry assigned to it.
 
-The proposed setup permits the attachment of richer metadata that goes beyond what can be linked directly to sequence records, addressing previous issues where metadata was lost during synchronization between BOLD and GenBank [@Sayers2024-15]. An important aspect of future work outlined during the hackathon involves setting up authentication and data submission processes to incorporate genome skimming data into ENA to make use of this possibility. 
+The proposed setup permits the attachment of richer metadata that goes beyond what can be linked directly to sequence records, addressing previous issues where metadata was lost during synchronization between BOLD and GenBank [@Sayers2024-15]. An important aspect of future work outlined during the hackathon involves setting up authentication and data submission processes to incorporate genome skimming data into ENA to make use of this possibility.
 
 Furthermore, the hackathon highlighted the need for taxonomic alignment between UNITE and BOLD. With UNITE mapping its taxa, or species hypotheses, to various taxonomies including the Catalogue of Life [@Banki2022-16], the integration of these systems is facilitated by the ChecklistBank [@Doring2022-17], which manages numerous taxonomic checklists, including the BOLD taxonomy. This connection is seen as a pathway for ensuring that the taxonomies used across different databases are harmonized, enhancing the taxonomic reconciliation of data across these platforms.
 
@@ -203,9 +207,9 @@ The improvements in barcode generation pipelines and genome skimming processes h
 
 Concretely, the specific next actions following the hackathon for the respective themes are as follows:
 
-* **Data Generation and Processing** \- Incorporate MultiQC output in the genome skimming pipeline for QA purposes. Adopt a common reference library and taxon validation step for genome skimming and amplicon sequencing results. Adopt a common non-sense mutation check (scanning for premature stop codons) for genome skimming and amplicon sequencing.  
-* **BOLD release candidate** \- Apply the UI components developed for the reference page on country-specific barcoding results to the other pages in the web application. Finalize the institution-specific results page. Finalize the back-end enhancements for performance and autocomplete functionality.   
-* **Wider data integration** \- Implement the proposed project structure for data submission to ENA of genome skimming results. Finalize UNITE’s web service endpoint for BCDM-compliant data delivery. Operationalize the vocabulary-mapping to concrete translation of barcoding metadata between data resources.  
+* **Data Generation and Processing** \- Incorporate MultiQC output in the genome skimming pipeline for QA purposes. Adopt a common reference library and taxon validation step for genome skimming and amplicon sequencing results. Adopt a common non-sense mutation check (scanning for premature stop codons) for genome skimming and amplicon sequencing.
+* **BOLD release candidate** \- Apply the UI components developed for the reference page on country-specific barcoding results to the other pages in the web application. Finalize the institution-specific results page. Finalize the back-end enhancements for performance and autocomplete functionality.
+* **Wider data integration** \- Implement the proposed project structure for data submission to ENA of genome skimming results. Finalize UNITE’s web service endpoint for BCDM-compliant data delivery. Operationalize the vocabulary-mapping to concrete translation of barcoding metadata between data resources.
 * **Reference data curation** \- Verify the accuracy of the metadata grading pipeline and the BAGS ranks on a subsample of BOLD data. Pre-filter BOLD data through triage into records that are optimal by both standards and those that require manual curation. Partition the latter by taxonomic groups in line with the expertise of the respective curators.
 
 The collaborative efforts during the hackathon have set a solid foundation for future work, with a focus on continuous improvement and standardization of workflows and data integration practices. Overall, the hackathon has significantly contributed to BGE’s objectives, fostering an environment of cooperation and innovation that will drive forward the goals of molecular biodiversity monitoring and research at scale.
@@ -221,28 +225,28 @@ The main manuscript was drafted by RAV. The Data Generation and Processing theme
 # References
 
 
-[^1]:  [https://github.com/o-william-white/skim2mt](https://github.com/o-william-white/skim2mt) 
+[^1]:  [https://github.com/o-william-white/skim2mt](https://github.com/o-william-white/skim2mt)
 
-[^2]:  [https://github.com/MultiQC/MultiQC](https://github.com/MultiQC/MultiQC) 
+[^2]:  [https://github.com/MultiQC/MultiQC](https://github.com/MultiQC/MultiQC)
 
-[^3]:  [https://github.com/UoMResearchIT/ro-crate\_snakemake\_tooling](https://github.com/UoMResearchIT/ro-crate_snakemake_tooling) 
+[^3]:  [https://github.com/UoMResearchIT/ro-crate\_snakemake\_tooling](https://github.com/UoMResearchIT/ro-crate_snakemake_tooling)
 
-[^4]:  [https://workflowhub.eu/workflows/791](https://workflowhub.eu/workflows/791) 
+[^4]:  [https://workflowhub.eu/workflows/791](https://workflowhub.eu/workflows/791)
 
-[^5]:  [https://github.com/gjeunen/reference\_database\_creator](https://github.com/gjeunen/reference_database_creator) 
+[^5]:  [https://github.com/gjeunen/reference\_database\_creator](https://github.com/gjeunen/reference_database_creator)
 
-[^6]:  [https://github.com/DNAdiversity/BCDM](https://github.com/DNAdiversity/BCDM) 
+[^6]:  [https://github.com/DNAdiversity/BCDM](https://github.com/DNAdiversity/BCDM)
 
-[^7]:  [https://boldsystems.eu/api/docs](https://boldsystems.eu/api/docs) 
+[^7]:  [https://boldsystems.eu/api/docs](https://boldsystems.eu/api/docs)
 
-[^8]:  [https://www.dissco.eu/](https://www.dissco.eu/) 
+[^8]:  [https://www.dissco.eu/](https://www.dissco.eu/)
 
-[^9]:  [https://www.ebi.ac.uk/ena/browser/view/ERC000053](https://www.ebi.ac.uk/ena/browser/view/ERC000053) 
+[^9]:  [https://www.ebi.ac.uk/ena/browser/view/ERC000053](https://www.ebi.ac.uk/ena/browser/view/ERC000053)
 
-[^10]:  [https://github.com/bge-barcoding/StayingMapped](https://github.com/bge-barcoding/StayingMapped) 
+[^10]:  [https://github.com/bge-barcoding/StayingMapped](https://github.com/bge-barcoding/StayingMapped)
 
-[^11]:  [https://www.w3.org/2004/02/skos/](https://www.w3.org/2004/02/skos/) 
+[^11]:  [https://www.w3.org/2004/02/skos/](https://www.w3.org/2004/02/skos/)
 
-[^12]:  [https://github.com/FabianDeister/Library\_curation\_BOLD](https://github.com/FabianDeister/Library_curation_BOLD) 
+[^12]:  [https://github.com/FabianDeister/Library\_curation\_BOLD](https://github.com/FabianDeister/Library_curation_BOLD)
 
-[^13]:  [https://workflowhub.eu/workflows/833](https://workflowhub.eu/workflows/833) 
+[^13]:  [https://workflowhub.eu/workflows/833](https://workflowhub.eu/workflows/833)
